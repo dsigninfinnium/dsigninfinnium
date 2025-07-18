@@ -1,0 +1,90 @@
+{
+  "data": {
+    "node": {
+      "fields": {
+        "nodes": [
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tI",
+            "name": "Title",
+            "dataType": "TITLE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tM",
+            "name": "Assignees",
+            "dataType": "ASSIGNEES"
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBkZnRc4A-CZKzgxj7tQ",
+            "name": "Status",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "f75ad846",
+                "name": "Todo",
+                "description": "This item hasn't been started",
+                "color": "GREEN"
+              },
+              {
+                "id": "47fc9ee4",
+                "name": "In Progress",
+                "description": "This is actively being worked on",
+                "color": "YELLOW"
+              },
+              {
+                "id": "98236657",
+                "name": "Done",
+                "description": "This has been completed",
+                "color": "PURPLE"
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tU",
+            "name": "Labels",
+            "dataType": "LABELS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tY",
+            "name": "Linked pull requests",
+            "dataType": "LINKED_PULL_REQUESTS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tc",
+            "name": "Milestone",
+            "dataType": "MILESTONE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tg",
+            "name": "Repository",
+            "dataType": "REPOSITORY"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7tk",
+            "name": "Reviewers",
+            "dataType": "REVIEWERS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7to",
+            "name": "Parent issue",
+            "dataType": "PARENT_ISSUE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBkZnRc4A-CZKzgxj7ts",
+            "name": "Sub-issues progress",
+            "dataType": "SUB_ISSUES_PROGRESS"
+          }
+        ]
+      }
+    }
+  }
+}
