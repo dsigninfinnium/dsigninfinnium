@@ -1,0 +1,20 @@
+
+--10000 -- 17000
+--6/7 -- 1500
+--21 PRofiles Per Min - 500
+
+--49 PRofiles Per Min
+
+--24 -- 11 AM -- 17000
+--25 -- 11 AM -- 47000
+--26 -- 11 AM -- 110K 
+--27 -- 11 AM -- 471K  
+--Maste_Tmp
+--Master
+--Merge.
+
+select top 10 Name_GroupId,count(1) from TaskEntityRollUp with(nolock) where TaskId = 4748 and Name_GroupId is not null and Key1_GroupId is null group by Name_GroupId order by 1
+
+--2025-12-23 10:10:05.243	5504
+Select GetDate(), 5504
+ 
