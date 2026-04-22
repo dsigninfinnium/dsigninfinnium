@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #9ca3af;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.sidebar a:hover {
+  color: white;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+  background: #f3f4f6;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px;
+  display: none;
+}
+
+/* Progress */
+.progress-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: green;
+  transition: 0.5s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Dashboard</h2>
+  <a href="#">Home</a>
+  <a href="#">Reports</a>
+  <a href="#">Settings</a>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <h3>Form Validation</h3>
+    <input type="text" id="name" placeholder="Enter name">
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+  <div class="card">
+    <h3>Modal Popup</h3>
+    <button onclick="openModal()">Open Modal</button>
+  </div>
+
+  <div class="card">
+    <h3>Progress Loader</h3>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <button onclick="startProgress()">Start</button>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Hello!</h3>
+    <p>This is a modal popup.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">Form Submitted!</div>
+
+<script>
+function openModal() {
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function submitForm() {
+  let name = document.getElementById("name").value;
+
+  if (name === "") {
+    alert("Name is required!");
+  } else {
+    showToast();
+  }
+}
+
+function showToast() {
+  let toast = document.getElementById("toast");
+  toast.style.display = "block";
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 2000);
+}
+
+function startProgress() {
+  let bar = document.getElementById("progress");
+  let width = 0;
+
+  let interval = setInterval(() => {
+    if (width >= 100) {
+      clearInterval(interval);
+    } else {
+      width += 10;
+      bar.style.width = width + "%";
+    }
+  }, 300);
+}
+</script>
+
+</body>
+</html>
