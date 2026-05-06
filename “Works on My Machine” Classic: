@@ -1,0 +1,1 @@
+When a QA tests a feature and finds multiple critical bugs, but the developer responds with “it’s working fine on my machine.” The QA retests in different environments, browsers, and devices, only to confirm the issue still exists everywhere except the developer’s magical laptop. The situation highlights the disconnect between development and testing environments.
