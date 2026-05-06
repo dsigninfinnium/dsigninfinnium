@@ -1,0 +1,1 @@
+A developer mentions that only a minor UI change was made, so full testing is not required. During validation, QA discovers that the change has impacted multiple modules, including functionality that was completely unrelated. What was described as a small update ends up requiring full regression testing.
